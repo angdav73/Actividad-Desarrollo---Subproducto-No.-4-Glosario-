@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Línea del Tiempo de la IA - Actividad Desarrollo Subproducto No. 4</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+<aside class="sidebar">
+
+    <nav class="sidenav">
+        <a href="{{ url_for('inicio') }}">🏠 Inicio</a>
+        <a href="{{ url_for('inicio') }}#antecedentes">📜 Antecedentes</a>
+        <a href="{{ url_for('linea_tiempo') }}" class="active">🕰️ Línea del Tiempo</a>
+        <a href="{{ url_for('infografia') }}">📊 Infografía de la IA</a>
+        <a href="{{ url_for('inicio') }}#glosario">📚 Glosario</a>
+    </nav>
+
+</aside>
+
+<div class="main-wrap">
+
+
+<header class="header">
+
+    <div class="logo">
+        Actividad Desarrollo - Subproducto No. 4
+    </div>
+
+    <p>
+        Línea del Tiempo de la Inteligencia Artificial
+    </p>
+
+</header>
+
+
+
+<main class="container">
+
+
+    <section class="hero">
+
+        <h1>
+            🕰️ Línea del Tiempo de la IA
+        </h1>
+
+        <p>
+            Antecedentes históricos y el surgimiento formal de la
+            Inteligencia Artificial como campo de estudio.
+        </p>
+
+    </section>
+
+
+
+    <section class="timeline-page">
+
+        <img src="{{ url_for('static', filename='linea_tiempo.jpg') }}"
+             alt="Línea de tiempo: antecedentes históricos y surgimiento formal de la IA"
+             loading="lazy">
+
+        <p class="timeline-note">
+            *Línea del Tiempo de Antecedentes de la IA.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        Todos los derechos reservados © 2026
+    </p>
+
+    <p>
+        Alumno: Angel David Carmona Lezama
+    </p>
+
+    <p>
+        Contacto: angelcarmona052@gmail.com
+    </p>
+
+</footer>
+
+
+</div><!-- /main-wrap -->
+
+</div><!-- /layout -->
+
+
+</body>
+
+</html>

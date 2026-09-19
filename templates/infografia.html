@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Infografía de la IA - Actividad Desarrollo Subproducto No. 4</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+<aside class="sidebar">
+
+    <nav class="sidenav">
+        <a href="{{ url_for('inicio') }}">🏠 Inicio</a>
+        <a href="{{ url_for('inicio') }}#antecedentes">📜 Antecedentes</a>
+        <a href="{{ url_for('linea_tiempo') }}">🕰️ Línea del Tiempo</a>
+        <a href="{{ url_for('infografia') }}" class="active">📊 Infografía de la IA</a>
+        <a href="{{ url_for('inicio') }}#glosario">📚 Glosario</a>
+    </nav>
+
+</aside>
+
+<div class="main-wrap">
+
+
+<header class="header">
+
+    <div class="logo">
+        Actividad Desarrollo - Subproducto No. 4
+    </div>
+
+    <p>
+        Infografía de la Inteligencia Artificial
+    </p>
+
+</header>
+
+
+
+<main class="container">
+
+
+    <section class="hero">
+
+        <h1>
+            Infografía de la IA
+        </h1>
+
+        <p>
+            Las Infografías de la IA: IA débil, IA general (AGI) e IA superinteligente.
+        </p>
+
+        <p style="margin-top:15px;">
+            <a class="pdf-btn"
+               href="{{ url_for('static', filename='infografia_ia.pdf') }}"
+               download>
+                ⬇ Descargar PDF
+            </a>
+            <a class="pdf-btn outline"
+               href="{{ url_for('static', filename='infografia_ia.pdf') }}"
+               target="_blank" rel="noopener">
+                ↗ Abrir en pestaña nueva
+            </a>
+        </p>
+
+    </section>
+
+
+
+    <section class="timeline-page">
+
+        <embed src="{{ url_for('static', filename='infografia_ia.pdf') }}"
+               type="application/pdf"
+               class="pdf-viewer">
+
+        <p class="timeline-note">
+            Si el visor no carga, usa "Abrir en pestaña nueva" o "Descargar PDF".
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        Todos los derechos reservados © 2026
+    </p>
+
+    <p>
+        Alumno: Angel David Carmona Lezama
+    </p>
+
+    <p>
+        Contacto: angelcarmona052@gmail.com
+    </p>
+
+</footer>
+
+
+</div><!-- /main-wrap -->
+
+</div><!-- /layout -->
+
+
+</body>
+
+</html>

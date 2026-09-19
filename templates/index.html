@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AI Explorer</title>
+    <title>Actividad Desarrollo - Subproducto No. 4</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
@@ -18,10 +18,27 @@
 <body>
 
 
+<div class="layout">
+
+<aside class="sidebar">
+
+    <nav class="sidenav">
+        <a href="{{ url_for('inicio') }}">🏠 Inicio</a>
+        <a href="#antecedentes">📜 Antecedentes</a>
+        <a href="{{ url_for('linea_tiempo') }}">🕰️ Línea del Tiempo</a>
+        <a href="{{ url_for('infografia') }}">📊 Infografía de la IA</a>
+        <a href="#glosario">📚 Glosario</a>
+    </nav>
+
+</aside>
+
+<div class="main-wrap">
+
+
 <header class="header">
 
     <div class="logo">
-        🤖 AI Explorer
+        Actividad Desarrollo - Subproducto No. 4
     </div>
 
     <p>
@@ -50,7 +67,107 @@
 
 
 
-    <section class="search-section">
+    <section class="antecedentes" id="antecedentes">
+
+        <h2>📜 Antecedentes de la Inteligencia Artificial</h2>
+
+        <div class="ant-grid">
+
+            <div class="ant-card">
+                <h3>¿Qué es inteligencia?</h3>
+                <ul>
+                    <li>Habilidad de razonar</li>
+                    <li>Resolver problemas</li>
+                    <li>Comprender ideas</li>
+                    <li>Aprender de la experiencia</li>
+                    <li>Adquirir y aplicar conocimiento</li>
+                    <li>Percibir y manipular objetos</li>
+                </ul>
+            </div>
+
+            <div class="ant-card">
+                <h3>🧠 Bases de la IA</h3>
+                <p>
+                    La Inteligencia Artificial se construyó en base a conocimientos
+                    y teorías existentes en otras áreas del conocimiento.
+                </p>
+            </div>
+
+            <div class="ant-card">
+                <h3>📖 Filosofía – Aristóteles (300 AC)</h3>
+                <p>
+                    Describe de forma estructurada la forma como el ser humano produce
+                    conclusiones racionales a partir de un grupo de premisas. (Silogismos)
+                </p>
+            </div>
+
+            <div class="ant-card">
+                <h3>➗ Matemáticas</h3>
+                <p>
+                    Razonamiento con algoritmos. El cálculo brindó las herramientas que
+                    permiten la modelación de diferentes tipos de fenómenos.
+                </p>
+            </div>
+
+            <div class="ant-card">
+                <h3>🧪 Psicología</h3>
+                <p>
+                    Refuerza la idea de que los humanos y otros animales pueden ser considerados
+                    como máquinas para el procesamiento de información. Psicólogos como Piaget y
+                    Craik definieron teorías como el conductismo y la psicología cognitiva.
+                </p>
+            </div>
+
+            <div class="ant-card">
+                <h3>💻 Computación</h3>
+                <p>
+                    Las teorías de la IA encuentran un medio para su implementación
+                    de artefactos y modelado cognitivo a través de las computadoras.
+                </p>
+            </div>
+
+            <div class="ant-card">
+                <h3>💬 Lingüística</h3>
+                <p>
+                    Aporta un área híbrida conocida como lingüística computacional
+                    o procesamiento del lenguaje natural.
+                </p>
+            </div>
+
+            <div class="ant-card">
+                <h3>📊 Economía</h3>
+                <p>
+                    Área experta en la toma de decisiones, debido a que éstas implican la pérdida
+                    o ganancia del rendimiento. (Teoría de la decisión, Teoría de juegos,
+                    Procesos de decisión de Markov para procesos secuenciales, entre otras).
+                </p>
+            </div>
+
+            <div class="ant-card">
+                <h3>🧬 Neurociencia</h3>
+                <p>
+                    Ha contribuido a la IA con los conocimientos recabados hasta la fecha
+                    sobre la forma como el cerebro procesa la información.
+                </p>
+            </div>
+
+            <div class="ant-card wide">
+                <h3>Inteligencia Artificial</h3>
+                <p>
+                    La Inteligencia Artificial es un campo interdisciplinario dedicado al diseño
+                    de sistemas capaces de realizar tareas asociadas con la inteligencia humana,
+                    como aprender, razonar, reconocer patrones, comprender lenguaje,
+                    resolver problemas y tomar decisiones.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="search-section" id="glosario">
 
         <input
             type="text"
@@ -113,6 +230,8 @@
              data-categoria="{{ concepto.categoria }}"
              data-termino="{{ concepto.termino|lower }}">
 
+
+            <img class="card-img" src="{{ concepto.imagen }}" alt="{{ concepto.termino }}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://picsum.photos/seed/{{ loop.index }}/600/350';">
 
             <span class="category-label">
 
@@ -202,11 +321,15 @@
 <footer>
 
     <p>
-        AI Explorer © 2026
+        Todos los derechos reservados © 2026
     </p>
 
     <p>
-        Glosario de Inteligencia Artificial
+        Alumno: Angel David Carmona Lezama
+    </p>
+
+    <p>
+        Contacto: angelcarmona052@gmail.com
     </p>
 
 </footer>
@@ -214,6 +337,11 @@
 
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</div><!-- /main-wrap -->
+
+</div><!-- /layout -->
 
 
 </body>
