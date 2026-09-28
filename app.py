@@ -230,6 +230,18 @@ def infografia():
 
 
 # ==============================
+# ENSAYO
+# ==============================
+
+@app.route("/ensayo")
+def ensayo():
+
+    return render_template(
+        "ensayo.html"
+    )
+
+
+# ==============================
 # INICIAR APLICACIÓN
 # ==============================
 

@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Infografía de la IA - Actividad Desarrollo Subproducto No. 4</title>
+    <title>Ensayo - Actividad Desarrollo Subproducto No. 4</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
@@ -26,8 +26,8 @@
         <a href="{{ url_for('inicio') }}">🏠 Inicio</a>
         <a href="{{ url_for('inicio') }}#antecedentes">📜 Antecedentes</a>
         <a href="{{ url_for('linea_tiempo') }}">🕰️ Línea del Tiempo</a>
-        <a href="{{ url_for('infografia') }}" class="active">📊 Infografía de la IA</a>
-        <a href="{{ url_for('ensayo') }}">📝 Ensayo</a>
+        <a href="{{ url_for('infografia') }}">📊 Infografía de la IA</a>
+        <a href="{{ url_for('ensayo') }}" class="active">📝 Ensayo</a>
         <a href="{{ url_for('inicio') }}#glosario">📚 Glosario</a>
     </nav>
 
@@ -43,7 +43,7 @@
     </div>
 
     <p>
-        Infografía de la Inteligencia Artificial
+        Ensayo
     </p>
 
 </header>
@@ -56,21 +56,21 @@
     <section class="hero">
 
         <h1>
-            Infografía de la IA
+            Ensayo
         </h1>
 
         <p>
-            Las Infografías de la IA: IA débil, IA general (AGI) e IA superinteligente.
+            Ensayo del Subproducto No. 5 — Angel David Carmona Lezama.
         </p>
 
         <p style="margin-top:15px;">
             <a class="pdf-btn"
-               href="{{ url_for('static', filename='infografia_ia.pdf') }}"
+               href="{{ url_for('static', filename='ensayo.pdf') }}"
                download>
                 ⬇ Descargar PDF
             </a>
             <a class="pdf-btn outline"
-               href="{{ url_for('static', filename='infografia_ia.pdf') }}"
+               href="{{ url_for('static', filename='ensayo.pdf') }}"
                target="_blank" rel="noopener">
                 ↗ Abrir en pestaña nueva
             </a>
@@ -82,7 +82,7 @@
 
     <section class="timeline-page">
 
-        <embed src="{{ url_for('static', filename='infografia_ia.pdf') }}"
+        <embed src="{{ url_for('static', filename='ensayo.pdf') }}"
                type="application/pdf"
                class="pdf-viewer">
 
