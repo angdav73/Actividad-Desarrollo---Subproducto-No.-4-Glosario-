@@ -13,7 +13,7 @@
           href="{{ url_for('static', filename='style.css') }}">
 
     <style>
-        .research { max-width: 900px; margin: 0 auto 60px; }
+        .research { width: 100%; }
         .research h2 { font-size: 26px; margin: 30px 0 15px; padding-bottom: 8px; border-bottom: 3px solid #111; }
         .research h3 { font-size: 20px; margin: 22px 0 10px; }
         .research h4 { font-size: 17px; margin: 16px 0 8px; color: #333; }
@@ -54,9 +54,17 @@
 
 <div class="main-wrap">
 
-<div class="header-inline" style="text-align:center; padding: 20px 0 0;">
-    <div class="logo" style="font-size:22px; font-weight:bold;">Actividad Desarrollo - Subproducto No. 4</div>
-</div>
+<header class="header">
+
+    <div class="logo">
+        Actividad Desarrollo - Subproducto No. 4
+    </div>
+
+    <p>
+        Algoritmos de Búsqueda
+    </p>
+
+</header>
 
 <main class="container">
 
@@ -65,7 +73,8 @@
         <p>Clasificación, elementos y ejemplos de los algoritmos de búsqueda en IA.</p>
     </section>
 
-    <section class="research">
+    <section class="timeline-page">
+        <div class="research">
 
         <h2>a) Algoritmo de búsqueda</h2>
         <p>Un algoritmo de búsqueda es un conjunto ordenado y finito de pasos que permite localizar uno o varios elementos dentro de una colección de datos (lista, arreglo, árbol, grafo, base de datos, etc.) que cumplan con un criterio determinado. Su resultado puede ser la posición del elemento, el elemento mismo o la indicación de que no existe.</p>
@@ -155,6 +164,7 @@
             <p>El algoritmo de búsqueda de amigos en común utiliza las relaciones entre usuarios para identificar conexiones compartidas. Se basa en la teoría de grafos y en la comparación de conjuntos, lo que permite encontrar amistades comunes y apoyar las recomendaciones de contactos dentro de una red social.</p>
         </div>
 
+        </div>
     </section>
 
 </main>
