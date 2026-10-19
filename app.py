@@ -22,8 +22,8 @@ conceptos = [
         "termino": "Machine Learning / Aprendizaje automático",
         "categoria": "Machine Learning",
         "definicion": "Consiste en entrenar algoritmos para que puedan realizar predicciones o tomar decisiones basándose en datos, permitiendo que las computadoras aprendan sin estar programadas explícitamente para cada tarea.",
-        "ejemplo": "Un sistema que aprende a identificar si un correo electrónico es spam analizando miles de mensajes.",
-        "fuente": "IBM",
+        "ejemplo": "Los coches Tesla , utilizan machine learning para interpretar su entorno y tomar decisiones de conducción. El sistema recibe como imágenes y videos de cámaras, mediciones numéricas de radares, además de datos de GPS. Estos datos están organizados de forma , ya que diferentes sensores proporcionan información simultáneamente. Mediante , el sistema identifica y clasifica objetos como automóviles, peatones o carriles. Finalmente, los datos procesados generan como información sobre el entorno y acciones como frenar, acelerar, girar o mantener el carril.    Tipos de datos que entran:  imágenes y videos de cámaras, mediciones numéricas de radares, además de datos de GPS.",
+        "fuente": "",
         "imagen": "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=600&q=80&auto=format&fit=crop"
     },
 
@@ -187,6 +187,16 @@ conceptos = [
         "ejemplo": "Utilizar hechos y reglas para que un programa pueda realizar deducciones sobre determinada información.",
         "fuente": "Libro de Inteligencia Artificial",
         "imagen": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&q=80&auto=format&fit=crop"
+    },
+
+    {
+        "termino": "Sistema inteligente",
+        "categoria": "Fundamentos",
+        "definicion": "Un sistema inteligente es un programa o dispositivo capaz de percibir su entorno, procesar información y tomar decisiones autónomas para resolver problemas complejos de manera efectiva. A diferencia de los sistemas tradicionales basados en reglas fijas, estos sistemas pueden aprender de la experiencia y adaptarse a nuevas situaciones utilizando técnicas de Inteligencia Artificial (IA).",
+        "ejemplo": "Un robot aspiradora que detecta los obstáculos de tu hogar, aprende la distribución de las habitaciones y optimiza su ruta de limpieza adaptándose a los cambios.",
+        "fuente": "Definición del autor",
+        "imagen": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&auto=format&fit=crop",
+        "esquema": "https://www.algotive.ai/hs-fs/hubfs/00%20Blog/08%20Sistemas%20Inteligentes/funcionamiento.png?width=1920&name=funcionamiento.png"
     }
 
 ]
@@ -238,6 +248,18 @@ def ensayo():
 
     return render_template(
         "ensayo.html"
+    )
+
+
+# ==============================
+# ALGORITMOS DE BÚSQUEDA
+# ==============================
+
+@app.route("/algoritmos")
+def algoritmos():
+
+    return render_template(
+        "algoritmos.html"
     )
 
 

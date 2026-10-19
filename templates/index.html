@@ -23,12 +23,12 @@
 <aside class="sidebar">
 
     <nav class="sidenav">
-        <a href="{{ url_for('inicio') }}">🏠 Inicio</a>
-        <a href="#antecedentes">📜 Antecedentes</a>
-        <a href="{{ url_for('linea_tiempo') }}">🕰️ Línea del Tiempo</a>
-        <a href="{{ url_for('infografia') }}">📊 Infografía de la IA</a>
-        <a href="{{ url_for('ensayo') }}">📝 Ensayo</a>
-        <a href="#glosario">📚 Glosario</a>
+        <a href="{{ url_for('inicio') }}">Inicio</a>
+        <a href="#antecedentes">Antecedentes</a>
+        <a href="{{ url_for('linea_tiempo') }}">Línea del Tiempo</a>
+        <a href="{{ url_for('infografia') }}">Infografía de la IA</a>
+        <a href="{{ url_for('ensayo') }}">Ensayo</a>
+        <a href="#glosario">Glosario</a>
     </nav>
 
 </aside>
@@ -70,7 +70,7 @@
 
     <section class="antecedentes" id="antecedentes">
 
-        <h2>📜 Antecedentes de la Inteligencia Artificial</h2>
+        <h2>Antecedentes de la Inteligencia Artificial</h2>
 
         <div class="ant-grid">
 
@@ -87,7 +87,7 @@
             </div>
 
             <div class="ant-card">
-                <h3>🧠 Bases de la IA</h3>
+                <h3>Bases de la IA</h3>
                 <p>
                     La Inteligencia Artificial se construyó en base a conocimientos
                     y teorías existentes en otras áreas del conocimiento.
@@ -95,7 +95,7 @@
             </div>
 
             <div class="ant-card">
-                <h3>📖 Filosofía – Aristóteles (300 AC)</h3>
+                <h3>Filosofía – Aristóteles (300 AC)</h3>
                 <p>
                     Describe de forma estructurada la forma como el ser humano produce
                     conclusiones racionales a partir de un grupo de premisas. (Silogismos)
@@ -103,7 +103,7 @@
             </div>
 
             <div class="ant-card">
-                <h3>➗ Matemáticas</h3>
+                <h3>Matemáticas</h3>
                 <p>
                     Razonamiento con algoritmos. El cálculo brindó las herramientas que
                     permiten la modelación de diferentes tipos de fenómenos.
@@ -111,7 +111,7 @@
             </div>
 
             <div class="ant-card">
-                <h3>🧪 Psicología</h3>
+                <h3>Psicología</h3>
                 <p>
                     Refuerza la idea de que los humanos y otros animales pueden ser considerados
                     como máquinas para el procesamiento de información. Psicólogos como Piaget y
@@ -120,7 +120,7 @@
             </div>
 
             <div class="ant-card">
-                <h3>💻 Computación</h3>
+                <h3>Computación</h3>
                 <p>
                     Las teorías de la IA encuentran un medio para su implementación
                     de artefactos y modelado cognitivo a través de las computadoras.
@@ -128,7 +128,7 @@
             </div>
 
             <div class="ant-card">
-                <h3>💬 Lingüística</h3>
+                <h3>Lingüística</h3>
                 <p>
                     Aporta un área híbrida conocida como lingüística computacional
                     o procesamiento del lenguaje natural.
@@ -136,7 +136,7 @@
             </div>
 
             <div class="ant-card">
-                <h3>📊 Economía</h3>
+                <h3>Economía</h3>
                 <p>
                     Área experta en la toma de decisiones, debido a que éstas implican la pérdida
                     o ganancia del rendimiento. (Teoría de la decisión, Teoría de juegos,
@@ -145,7 +145,7 @@
             </div>
 
             <div class="ant-card">
-                <h3>🧬 Neurociencia</h3>
+                <h3>Neurociencia</h3>
                 <p>
                     Ha contribuido a la IA con los conocimientos recabados hasta la fecha
                     sobre la forma como el cerebro procesa la información.
@@ -173,7 +173,7 @@
         <input
             type="text"
             id="buscador"
-            placeholder="🔎 Buscar concepto..."
+            placeholder="Buscar concepto..."
         >
 
     </section>
@@ -263,9 +263,27 @@
                     '{{ concepto.fuente }}'
                 )">
 
-                💡 Ver ejemplo
+                Ver ejemplo
 
             </button>
+
+
+            {% if concepto.esquema is defined %}
+
+            <button
+                class="example-button"
+                onclick="mostrarEsquema(
+                    '{{ concepto.termino }}',
+                    '{{ concepto.ejemplo }}',
+                    '{{ concepto.fuente }}',
+                    '{{ concepto.esquema }}'
+                )">
+
+                Ver esquema
+
+            </button>
+
+            {% endif %}
 
 
         </div>
@@ -298,16 +316,31 @@
 
 
         <h3>
-            💡 Ejemplo
+            Ejemplo
         </h3>
 
 
         <p id="modal-ejemplo"></p>
 
 
+        <div id="modal-esquema" class="modal-esquema">
+
+            <h3>
+                Esquema general
+            </h3>
+
+            <img
+                id="modal-esquema-img"
+                src=""
+                alt="Esquema general del sistema inteligente"
+            >
+
+        </div>
+
+
         <p class="fuente">
 
-            📚 Fuente:
+            Fuente:
             <span id="modal-fuente"></span>
 
         </p>

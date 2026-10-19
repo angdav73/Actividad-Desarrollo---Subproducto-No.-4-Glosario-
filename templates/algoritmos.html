@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Algoritmos de Búsqueda - Actividad Desarrollo Subproducto No. 4</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .research { max-width: 900px; margin: 0 auto 60px; }
+        .research h2 { font-size: 26px; margin: 30px 0 15px; padding-bottom: 8px; border-bottom: 3px solid #111; }
+        .research h3 { font-size: 20px; margin: 22px 0 10px; }
+        .research h4 { font-size: 17px; margin: 16px 0 8px; color: #333; }
+        .research p { color: #444; line-height: 1.7; margin-bottom: 12px; }
+        .research ul, .research ol { color: #444; line-height: 1.7; margin: 0 0 15px 25px; }
+        .research li { margin-bottom: 6px; }
+        .research table { width: 100%; border-collapse: collapse; margin: 15px 0 20px; font-size: 14px; }
+        .research th, .research td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; vertical-align: top; }
+        .research th { background: #111; color: white; }
+        .research tr:nth-child(even) td { background: #f7f7f7; }
+        .research img { max-width: 100%; height: auto; border-radius: 12px; margin: 20px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.15); }
+        .formula { background: #f0f0f0; padding: 12px 18px; border-radius: 8px; font-family: monospace; margin: 10px 0; text-align: center; }
+        .conclusion { background: #111; color: white; padding: 20px 25px; border-radius: 12px; margin-top: 25px; }
+        .conclusion p { color: #ddd; }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+<aside class="sidebar">
+
+    <nav class="sidenav">
+        <a href="{{ url_for('inicio') }}">🏠 Inicio</a>
+        <a href="{{ url_for('inicio') }}#antecedentes">📜 Antecedentes</a>
+        <a href="{{ url_for('linea_tiempo') }}">🕰️ Línea del Tiempo</a>
+        <a href="{{ url_for('infografia') }}">📊 Infografía de la IA</a>
+        <a href="{{ url_for('algoritmos') }}">🔍 Algoritmos de Búsqueda</a>
+        <a href="{{ url_for('ensayo') }}">📝 Ensayo</a>
+        <a href="{{ url_for('inicio') }}#glosario">📚 Glosario</a>
+    </nav>
+
+</aside>
+
+<div class="main-wrap">
+
+<div class="header-inline" style="text-align:center; padding: 20px 0 0;">
+    <div class="logo" style="font-size:22px; font-weight:bold;">Actividad Desarrollo - Subproducto No. 4</div>
+</div>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>🔍 Algoritmos de Búsqueda</h1>
+        <p>Clasificación, elementos y ejemplos de los algoritmos de búsqueda en IA.</p>
+    </section>
+
+    <section class="research">
+
+        <h2>a) Algoritmo de búsqueda</h2>
+        <p>Un algoritmo de búsqueda es un conjunto ordenado y finito de pasos que permite localizar uno o varios elementos dentro de una colección de datos (lista, arreglo, árbol, grafo, base de datos, etc.) que cumplan con un criterio determinado. Su resultado puede ser la posición del elemento, el elemento mismo o la indicación de que no existe.</p>
+        <p>Los algoritmos de búsqueda se evalúan principalmente por su eficiencia en tiempo (cuántas comparaciones realizan), su uso de memoria y su completitud (si garantizan encontrar la solución cuando existe).</p>
+
+        <h2>b) Elementos que intervienen en un algoritmo de búsqueda</h2>
+        <ol>
+            <li><strong>Datos de entrada:</strong> la colección de datos donde se buscará y el valor o criterio buscado.</li>
+            <li><strong>Espacio de búsqueda:</strong> el conjunto total de elementos o estados que el algoritmo puede revisar.</li>
+            <li><strong>Estructura de datos:</strong> la forma en que se organizan los datos (lista, arreglo ordenado, árbol, grafo, tabla hash).</li>
+            <li><strong>Criterio de comparación:</strong> la condición que determina si un elemento es el buscado (igualdad, rango, similitud).</li>
+            <li><strong>Estrategia o proceso de búsqueda:</strong> el método para recorrer el espacio (uno por uno, dividiendo a la mitad, por niveles, en profundidad).</li>
+            <li><strong>Condición de paro:</strong> lo que indica cuándo detenerse (elemento encontrado o fin de los datos).</li>
+            <li><strong>Resultado o salida:</strong> la respuesta del algoritmo (posición, elemento, lista de coincidencias o mensaje de "no encontrado").</li>
+        </ol>
+
+        <h2>c) Ejemplo: búsqueda de amigos en común en Facebook</h2>
+
+        <h3>1. Elementos del algoritmo</h3>
+        <table>
+            <thead>
+                <tr><th>Elemento</th><th>En el ejemplo de Facebook</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Datos de entrada</td><td>Listas de amigos de los dos usuarios que se desean comparar</td></tr>
+                <tr><td>Nodos</td><td>Cada usuario dentro de la red social</td></tr>
+                <tr><td>Aristas o conexiones</td><td>Las relaciones de amistad entre usuarios</td></tr>
+                <tr><td>Espacio de búsqueda</td><td>Conjunto de amigos asociados a los dos perfiles</td></tr>
+                <tr><td>Criterio de comparación</td><td>Identificar qué usuarios aparecen en ambas listas</td></tr>
+                <tr><td>Proceso de búsqueda</td><td>Comparar las listas mediante una intersección de conjuntos</td></tr>
+                <tr><td>Resultado</td><td>Lista de amigos en común entre los dos usuarios</td></tr>
+            </tbody>
+        </table>
+
+        <h3>2. Relaciones que existen</h3>
+        <ul>
+            <li><strong>Relación directa:</strong> dos usuarios están conectados porque son amigos en Facebook.</li>
+            <li><strong>Relación indirecta:</strong> dos usuarios están conectados a través de una tercera persona, aunque no sean amigos entre sí.</li>
+            <li><strong>Relación en común:</strong> dos usuarios comparten una amistad con la misma persona.</li>
+        </ul>
+        <p>Ejemplo de red de amistades: María es amiga en común de Ana y Carlos.</p>
+
+        <h3>3. Ejemplo práctico</h3>
+        <ul>
+            <li>Amigos de Ana = {'{'}María, Pedro{'}'}</li>
+            <li>Amigos de Carlos = {'{'}María, Laura{'}'}</li>
+        </ul>
+        <div class="formula">{'{'}María, Pedro{'}'} ∩ {'{'}María, Laura{'}'} = {'{'}María{'}'}</div>
+        <p>El algoritmo compara ambas listas y determina que María es la amiga en común, porque aparece en las dos.</p>
+
+        <h2>d) Clasificación de algoritmos de búsqueda</h2>
+        <p>Existen varias formas de clasificarlos. La más usada es según la estructura de datos donde se busca.</p>
+
+        <h3>1. Búsqueda en listas o arreglos (estructuras lineales)</h3>
+        <ul>
+            <li><strong>Búsqueda secuencial (lineal):</strong> revisa los elementos uno por uno desde el inicio. No requiere que los datos estén ordenados. Complejidad O(n).</li>
+            <li><strong>Búsqueda binaria:</strong> divide repetidamente a la mitad una lista ordenada. Complejidad O(log n).</li>
+            <li><strong>Búsqueda por interpolación:</strong> estima la posición probable del dato en una lista ordenada y uniforme. Promedio O(log log n).</li>
+            <li><strong>Búsqueda por función hash:</strong> calcula directamente la posición a partir de la clave. Promedio O(1).</li>
+        </ul>
+
+        <h3>2. Búsqueda en grafos y árboles</h3>
+        <h4>Búsqueda no informada (ciega)</h4>
+        <ul>
+            <li><strong>Búsqueda en amplitud (BFS):</strong> explora por niveles. Es útil para encontrar el camino más corto en grafos sin pesos.</li>
+            <li><strong>Búsqueda en profundidad (DFS):</strong> avanza por una rama hasta el fondo antes de retroceder.</li>
+            <li><strong>Costo uniforme (Dijkstra):</strong> expande siempre el camino de menor costo acumulado.</li>
+        </ul>
+        <h4>Búsqueda informada (heurística)</h4>
+        <ul>
+            <li><strong>A*:</strong> combina el costo recorrido con una heurística. Es completa y óptima si la heurística es admisible.</li>
+            <li><strong>Búsqueda voraz (primero el mejor):</strong> elige solo lo que parece más cercano a la meta.</li>
+        </ul>
+
+        <h3>Otras clasificaciones complementarias</h3>
+        <ul>
+            <li><strong>Por ubicación de los datos:</strong> interna (en memoria RAM) o externa (en disco o bases de datos).</li>
+            <li><strong>Por tipo de coincidencia:</strong> exacta (el valor es idéntico) o aproximada (valores similares).</li>
+        </ul>
+        <p>El ejemplo de Facebook se ubica en la rama de grafos: los usuarios son nodos y las amistades son aristas. Para comparar las dos listas se usa la intersección de conjuntos, que con una tabla hash es muy eficiente (O(n)).</p>
+
+        <h2>e) Infografía: Clasificación de algoritmos de búsqueda</h2>
+        <img src="{{ url_for('static', filename='algoritmos_busqueda.png') }}" alt="Infografía clasificación de algoritmos de búsqueda">
+
+        <div class="conclusion">
+            <h3 style="color:white; margin-top:0;">Conclusión</h3>
+            <p>El algoritmo de búsqueda de amigos en común utiliza las relaciones entre usuarios para identificar conexiones compartidas. Se basa en la teoría de grafos y en la comparación de conjuntos, lo que permite encontrar amistades comunes y apoyar las recomendaciones de contactos dentro de una red social.</p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Todos los derechos reservados © 2026</p>
+    <p>Alumno: Angel David Carmona Lezama</p>
+    <p>Contacto: angelcarmona052@gmail.com</p>
+</footer>
+
+</div><!-- /main-wrap -->
+
+</div><!-- /layout -->
+
+</body>
+
+</html>
