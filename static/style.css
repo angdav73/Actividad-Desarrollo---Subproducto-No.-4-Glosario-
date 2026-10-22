@@ -450,3 +450,15 @@ footer {
     font-size: 14px;
 
 }
+
+/* JUSTIFICACION DE PARRAFOS */
+
+main p,
+main li {
+    text-align: justify;
+}
+
+.hero p {
+    text-align: center;
+}
+
