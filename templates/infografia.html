@@ -17,18 +17,31 @@
             Las Infografías de la IA: IA débil, IA general (AGI) e IA superinteligente.
         </p>
 
+        <p style="margin-top:15px;">
+            <a class="pdf-btn"
+               href="{{ url_for('static', filename='infografia_ia.pdf') }}"
+               download>
+                ⬇ Descargar PDF
+            </a>
+            <a class="pdf-btn outline"
+               href="{{ url_for('static', filename='infografia_ia.pdf') }}"
+               target="_blank" rel="noopener">
+                ↗ Abrir en pestaña nueva
+            </a>
+        </p>
+
     </section>
 
 
 
     <section class="timeline-page">
 
-        <img src="{{ url_for('static', filename='infografia_final.jpg') }}"
-             alt="Infografía de la IA: débil, general y superinteligente"
-             loading="lazy">
+        <embed src="{{ url_for('static', filename='infografia_ia.pdf') }}"
+               type="application/pdf"
+               class="pdf-viewer">
 
         <p class="timeline-note">
-            Infografía de la IA.
+            Si el visor no carga, usa "Abrir en pestaña nueva" o "Descargar PDF".
         </p>
 
     </section>
