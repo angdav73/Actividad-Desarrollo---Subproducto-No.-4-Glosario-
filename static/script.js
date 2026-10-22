@@ -71,7 +71,20 @@ function mostrarEjemplo(termino, ejemplo, fuente) {
 
     document.getElementById("modal-fuente").textContent = fuente;
 
+    document.getElementById("modal-esquema").style.display = "none";
+
     document.getElementById("modal").style.display = "flex";
+
+}
+
+
+function mostrarEsquema(termino, ejemplo, fuente, esquema) {
+
+    mostrarEjemplo(termino, ejemplo, fuente);
+
+    document.getElementById("modal-esquema-img").src = esquema;
+
+    document.getElementById("modal-esquema").style.display = "block";
 
 }
 

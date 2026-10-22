@@ -1,56 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
+{% block title %}Actividad Desarrollo - Subproducto No. 4{% endblock %}
 
-    <meta charset="UTF-8">
+{% block header_subtitle %}Glosario de Inteligencia Artificial{% endblock %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Actividad Desarrollo - Subproducto No. 4</title>
-
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
-
-</head>
-
-
-<body>
-
-
-<div class="layout">
-
-<aside class="sidebar">
-
-    <nav class="sidenav">
-        <a href="{{ url_for('inicio') }}">Inicio</a>
-        <a href="#antecedentes">Antecedentes</a>
-        <a href="{{ url_for('linea_tiempo') }}">Línea del Tiempo</a>
-        <a href="{{ url_for('infografia') }}">Infografía de la IA</a>
-        <a href="{{ url_for('ensayo') }}">Ensayo</a>
-        <a href="#glosario">Glosario</a>
-    </nav>
-
-</aside>
-
-<div class="main-wrap">
-
-
-<header class="header">
-
-    <div class="logo">
-        Actividad Desarrollo - Subproducto No. 4
-    </div>
-
-    <p>
-        Glosario de Inteligencia Artificial
-    </p>
-
-</header>
-
-
-
-<main class="container">
+{% block content %}
 
 
     <section class="hero">
@@ -295,9 +249,6 @@
     </section>
 
 
-</main>
-
-
 
 <div id="modal" class="modal">
 
@@ -350,34 +301,9 @@
 
 </div>
 
+{% endblock %}
 
 
-<footer>
-
-    <p>
-        Todos los derechos reservados © 2026
-    </p>
-
-    <p>
-        Alumno: Angel David Carmona Lezama
-    </p>
-
-    <p>
-        Contacto: angelcarmona052@gmail.com
-    </p>
-
-</footer>
-
-
-
+{% block scripts %}
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-
-
-</div><!-- /main-wrap -->
-
-</div><!-- /layout -->
-
-
-</body>
-
-</html>
+{% endblock %}

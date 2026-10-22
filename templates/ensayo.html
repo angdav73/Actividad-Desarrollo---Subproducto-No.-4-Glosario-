@@ -1,62 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
+{% block title %}Ensayo - Actividad Desarrollo Subproducto No. 4{% endblock %}
 
-    <meta charset="UTF-8">
+{% block header_subtitle %}Ensayo{% endblock %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ensayo - Actividad Desarrollo Subproducto No. 4</title>
-
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
-
-</head>
-
-
-<body>
-
-
-<div class="layout">
-
-<aside class="sidebar">
-
-    <nav class="sidenav">
-        <a href="{{ url_for('inicio') }}">Inicio</a>
-        <a href="{{ url_for('inicio') }}#antecedentes">Antecedentes</a>
-        <a href="{{ url_for('linea_tiempo') }}">Línea del Tiempo</a>
-        <a href="{{ url_for('infografia') }}">Infografía de la IA</a>
-        <a href="{{ url_for('ensayo') }}" class="active">Ensayo</a>
-        <a href="{{ url_for('inicio') }}#glosario">Glosario</a>
-    </nav>
-
-</aside>
-
-<div class="main-wrap">
-
-
-<header class="header">
-
-    <div class="logo">
-        Actividad Desarrollo - Subproducto No. 4
-    </div>
-
-    <p>
-        Ensayo
-    </p>
-
-</header>
-
-
-
-<main class="container">
+{% block content %}
 
 
     <section class="hero">
 
         <h1>
-            Ensayo
+            📝 Ensayo
         </h1>
 
         <p>
@@ -67,12 +21,12 @@
             <a class="pdf-btn"
                href="{{ url_for('static', filename='ensayo.pdf') }}"
                download>
-                Descargar PDF
+                ⬇ Descargar PDF
             </a>
             <a class="pdf-btn outline"
                href="{{ url_for('static', filename='ensayo.pdf') }}"
                target="_blank" rel="noopener">
-                 Abrir en pestaña nueva
+                ↗ Abrir en pestaña nueva
             </a>
         </p>
 
@@ -93,32 +47,4 @@
     </section>
 
 
-</main>
-
-
-
-<footer>
-
-    <p>
-        Todos los derechos reservados © 2026
-    </p>
-
-    <p>
-        Alumno: Angel David Carmona Lezama
-    </p>
-
-    <p>
-        Contacto: angelcarmona052@gmail.com
-    </p>
-
-</footer>
-
-
-</div><!-- /main-wrap -->
-
-</div><!-- /layout -->
-
-
-</body>
-
-</html>
+{% endblock %}

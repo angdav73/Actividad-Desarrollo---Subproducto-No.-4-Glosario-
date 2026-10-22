@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Actividad Desarrollo - Subproducto No. 4{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    {% block styles %}{% endblock %}
+
+</head>
+
+
+<body>
+
+{% set active = active|default('') %}
+
+<div class="layout">
+
+<aside class="sidebar">
+
+    <nav class="sidenav">
+        <a href="{{ url_for('inicio') }}"
+           class="{{ 'active' if active == 'inicio' else '' }}">🏠 Inicio</a>
+
+        <a href="{{ url_for('inicio') }}#antecedentes"
+           class="{{ 'active' if active == 'antecedentes' else '' }}">📜 Antecedentes</a>
+
+        <a href="{{ url_for('linea_tiempo') }}"
+           class="{{ 'active' if active == 'linea' else '' }}">🕰️ Línea del Tiempo</a>
+
+        <a href="{{ url_for('infografia') }}"
+           class="{{ 'active' if active == 'infografia' else '' }}">📊 Infografía de la IA</a>
+
+        <a href="{{ url_for('algoritmos') }}"
+           class="{{ 'active' if active == 'algoritmos' else '' }}">🔍 Algoritmos de Búsqueda</a>
+
+        <a href="{{ url_for('ensayo') }}"
+           class="{{ 'active' if active == 'ensayo' else '' }}">📝 Ensayo</a>
+
+        <a href="{{ url_for('inicio') }}#glosario"
+           class="{{ 'active' if active == 'glosario' else '' }}">📚 Glosario</a>
+    </nav>
+
+</aside>
+
+<div class="main-wrap">
+
+
+<header class="header">
+
+    <div class="logo">
+        Actividad Desarrollo - Subproducto No. 4
+    </div>
+
+    <p>
+        {% block header_subtitle %}{% endblock %}
+    </p>
+
+</header>
+
+
+
+<main class="container">
+
+{% block content %}{% endblock %}
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        Todos los derechos reservados © 2026
+    </p>
+
+    <p>
+        Alumno: Angel David Carmona Lezama
+    </p>
+
+    <p>
+        Contacto: angelcarmona052@gmail.com
+    </p>
+
+</footer>
+
+
+</div><!-- /main-wrap -->
+
+</div><!-- /layout -->
+
+
+{% block scripts %}{% endblock %}
+
+
+</body>
+
+</html>

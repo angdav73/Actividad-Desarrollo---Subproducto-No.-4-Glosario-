@@ -211,7 +211,8 @@ def inicio():
 
     return render_template(
         "index.html",
-        conceptos=conceptos
+        conceptos=conceptos,
+        active="inicio"
     )
 
 
@@ -223,7 +224,8 @@ def inicio():
 def linea_tiempo():
 
     return render_template(
-        "linea_tiempo.html"
+        "linea_tiempo.html",
+        active="linea"
     )
 
 
@@ -235,7 +237,8 @@ def linea_tiempo():
 def infografia():
 
     return render_template(
-        "infografia.html"
+        "infografia.html",
+        active="infografia"
     )
 
 
@@ -247,7 +250,8 @@ def infografia():
 def ensayo():
 
     return render_template(
-        "ensayo.html"
+        "ensayo.html",
+        active="ensayo"
     )
 
 
@@ -259,7 +263,8 @@ def ensayo():
 def algoritmos():
 
     return render_template(
-        "algoritmos.html"
+        "algoritmos.html",
+        active="algoritmos"
     )
 
 

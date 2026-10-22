@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
+{% block title %}Algoritmos de Búsqueda - Actividad Desarrollo Subproducto No. 4{% endblock %}
 
-    <meta charset="UTF-8">
+{% block header_subtitle %}Algoritmos de Búsqueda{% endblock %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Algoritmos de Búsqueda - Actividad Desarrollo Subproducto No. 4</title>
-
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
-
+{% block styles %}
     <style>
         .research { width: 100%; }
         .research h2 { font-size: 26px; margin: 30px 0 15px; padding-bottom: 8px; border-bottom: 3px solid #111; }
@@ -29,44 +22,10 @@
         .conclusion { background: #111; color: white; padding: 20px 25px; border-radius: 12px; margin-top: 25px; }
         .conclusion p { color: #ddd; }
     </style>
+{% endblock %}
 
-</head>
+{% block content %}
 
-
-<body>
-
-
-<div class="layout">
-
-<aside class="sidebar">
-
-    <nav class="sidenav">
-        <a href="{{ url_for('inicio') }}">🏠 Inicio</a>
-        <a href="{{ url_for('inicio') }}#antecedentes">📜 Antecedentes</a>
-        <a href="{{ url_for('linea_tiempo') }}">🕰️ Línea del Tiempo</a>
-        <a href="{{ url_for('infografia') }}">📊 Infografía de la IA</a>
-        <a href="{{ url_for('algoritmos') }}">🔍 Algoritmos de Búsqueda</a>
-        <a href="{{ url_for('ensayo') }}">📝 Ensayo</a>
-        <a href="{{ url_for('inicio') }}#glosario">📚 Glosario</a>
-    </nav>
-
-</aside>
-
-<div class="main-wrap">
-
-<header class="header">
-
-    <div class="logo">
-        Actividad Desarrollo - Subproducto No. 4
-    </div>
-
-    <p>
-        Algoritmos de Búsqueda
-    </p>
-
-</header>
-
-<main class="container">
 
     <section class="hero">
         <h1>🔍 Algoritmos de Búsqueda</h1>
@@ -167,18 +126,5 @@
         </div>
     </section>
 
-</main>
 
-<footer>
-    <p>Todos los derechos reservados © 2026</p>
-    <p>Alumno: Angel David Carmona Lezama</p>
-    <p>Contacto: angelcarmona052@gmail.com</p>
-</footer>
-
-</div><!-- /main-wrap -->
-
-</div><!-- /layout -->
-
-</body>
-
-</html>
+{% endblock %}
