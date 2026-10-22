@@ -197,6 +197,16 @@ conceptos = [
         "fuente": "Definición del autor",
         "imagen": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&auto=format&fit=crop",
         "esquema": "https://www.algotive.ai/hs-fs/hubfs/00%20Blog/08%20Sistemas%20Inteligentes/funcionamiento.png?width=1920&name=funcionamiento.png"
+    },
+
+    {
+        "termino": "Algoritmos de búsqueda",
+        "categoria": "Algoritmos",
+        "definicion": "Un algoritmo de búsqueda es un conjunto ordenado y finito de pasos que permite localizar uno o varios elementos dentro de una colección de datos (lista, arreglo, árbol, grafo, base de datos, etc.) que cumplan con un criterio determinado. Su resultado puede ser la posición del elemento, el elemento mismo o la indicación de que no existe. Se evalúan por su eficiencia en tiempo, su uso de memoria y su completitud.",
+        "ejemplo": "Búsqueda de amigos en común en Facebook: se comparan las listas de amigos de dos usuarios mediante una intersección de conjuntos. Amigos de Ana = {María, Pedro} y amigos de Carlos = {María, Laura}. La intersección {María, Pedro} ∩ {María, Laura} = {María} determina que María es la amiga en común porque aparece en ambas listas. Los usuarios son los nodos y las amistades las aristas, por lo que el problema se basa en la teoría de grafos.",
+        "fuente": "Investigación de algoritmos de búsqueda",
+        "imagen": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&q=80&auto=format&fit=crop",
+        "esquema": "/static/algoritmos_busqueda.jpg"
     }
 
 ]
